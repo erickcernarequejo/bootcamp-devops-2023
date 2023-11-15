@@ -21,10 +21,20 @@ DevOps es una práctica y cultura que se enfoca en la colaboración y comunicaci
 
 - Mayor seguridad: Al integrar prácticas de seguridad en el ciclo de vida del desarrollo, DevOps puede ayudar a mejorar la seguridad de las aplicaciones y la infraestructura.
 
-### Sobre el Temarío 
-Son 10 clases donde cubriremos estos temas:
+### DevOps Travel
 
-- Instalación de paquetes
-- Verificación paquetes instalados
-- Configuración base de datos
-- Despliegue aplicación
+- Los usuarios pueden reservar paquetes fácilmente a través de esta plataforma fácil de usar en la ubicación deseada.
+- El sitio web front-end está creado utilizando HTML CSS y JavaScript.
+- Este sitio web se hace flexible y responsivo.
+- El Backend de este sitio web está realizado utilizando base de datos php y MySQL.
+- El sitio web se ejecuta en el servidor Apache.
+
+### Instalación de Paquetes
+
+Asegúrate de ejecutar los siguientes comandos en el orden que se indican para el despliegue del proyecto.
+
+```bash
+
+chmod +x deploy.sh
+./deploy.sh
+
