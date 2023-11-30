@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   web-words:
-    build: ./web
-    # image: erickcernarequejo/295words-docker-web-words:v1.0
+    # build: ./web
+    image: erickcernarequejo/295words-docker-web-words:${IMAGE_VERSION}
     container_name: web-words-app
     depends_on:
       - api
@@ -13,8 +13,8 @@ services:
       - frontend
       - backend
   api:
-    build: ./api
-    # image: erickcernarequejo/295words-docker-api:v1.0
+    # build: ./api
+    image: erickcernarequejo/295words-docker-api:${IMAGE_VERSION}
     container_name: backend-api-app
     depends_on:
       - db
@@ -37,15 +37,6 @@ services:
     volumes:
       - ./db/words.sql:/docker-entrypoint-initdb.d/words.sql:ro
       - postgres-data:/var/lib/postgresql/data
-  # nginx-proxy:
-  #   image: jwilder/nginx-proxy
-  #   container_name: nginx-proxy
-  #   ports:
-  #     - 80:80
-  #   volumes:
-  #     - /var/run/docker.sock:/tmp/docker.sock:ro
-  #   networks:
-  #     - frontend
 volumes:
   postgres-data:
 networks:
